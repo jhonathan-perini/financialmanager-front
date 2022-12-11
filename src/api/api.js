@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'http://localhost:8000/api/v1'
+const baseURL = 'https://financial-manager.onrender.com/api/v1'
 
 const api = axios.create({
     baseURL,
