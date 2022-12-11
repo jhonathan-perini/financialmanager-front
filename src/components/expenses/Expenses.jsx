@@ -195,13 +195,15 @@ export default function Expenses (){
 
     function createExpense(){
         console.log(expense)
-if(validator.isCurrency(expense.value, {require_symbol: false, thousands_separator: ',', decimal_separator: '.'})){
+if(validator.isCurrency(expense.value, {require_symbol: false, thousands_separator: ',', decimal_separator: '.'}) ){
     if(expense.name.trim().length > 0 && expense.date && expense.type?.label ){
         if(expense.type.label === 'income'){
+            expense.value = expense.value.replace(",", '')
             isUpdating ? updateExpense.mutate(expense) :  addExpense(expense)
             setDialog(false)
             setExpense(initialState)
         } else if (expense.category?.label.length > 0)  {
+            expense.value = expense.value.replace(",", '')
             isUpdating ? updateExpense.mutate(expense) :  addExpense(expense)
             setDialog(false)
             setExpense(initialState)
@@ -212,7 +214,7 @@ if(validator.isCurrency(expense.value, {require_symbol: false, thousands_separat
         toast.error('Please, fill all the inputs.')
     }
 } else {
-    toast.error('Please, only numeric values are allowed.')
+    toast.error('Please, only numeric values are allowed. Decimals separated by "."')
 }
 
 
