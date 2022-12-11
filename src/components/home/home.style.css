@@ -1,0 +1,89 @@
+.home__spider, .home__doll, .home__pumpkin{
+    width: 20rem
+}
+
+.home__container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 0.15fr 0.15fr 1fr 0.2fr;
+    grid-template-areas: "textImage doll"
+"cardContainerIntro doll"
+"cardContainer cardContainer"
+"homeFooter homeFooter";
+}
+
+.home__header{
+    grid-area: textImage;
+    display: flex;
+}
+.home__card-container{
+    grid-area: cardContainer;
+    display: flex;
+    padding-block: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home__header > h1{
+    font-family: "October Crow", sans-serif ;
+    font-size: 7.6rem;
+    color: white;
+    align-self: center;
+    margin-left: 4rem;
+}
+
+.intro-header{
+    grid-area: cardContainerIntro;
+    font-family: "October Crow", sans-serif ;
+    font-size: 3.6rem;
+    color: white;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+.home__doll{
+    grid-area: doll;
+    grid-row: 1 /span 2;
+    align-self: center;
+    justify-self: end;
+}
+
+.home__pumpkin{
+
+    grid-area: iconPumpkin;
+    justify-self: end;
+
+    transform: translateY(50%);
+}
+
+.button__container{
+    grid-area: homeFooter;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 /span2;
+
+}
+
+.button__container > a{
+   text-decoration: none;
+    word-spacing: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.home__eye{
+
+
+    width: 30px;
+    margin-inline:10px;
+
+}

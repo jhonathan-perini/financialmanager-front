@@ -1,0 +1,29 @@
+.about__container{
+    display: flex;
+    padding-block: 2rem;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about__image{
+    margin: 3rem auto;
+    width: 60rem;
+
+}
+.about__container  div:first-child {
+    background: #323232;
+    border-radius: 5rem;
+    display: flex;
+    padding: 2rem 2rem 8rem 2rem;
+    align-items: center;
+}
+.about__container  div:first-child > div:nth-child(2) > p {
+    font-family: "Hallowen inline",sans-serif;
+    font-size: 4rem;
+    line-height: 7rem;
+    text-align: center;
+    color: white;
+}
+
+

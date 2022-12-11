@@ -1,0 +1,131 @@
+
+.login{
+  background: #242424 url("../../assets/login/login-bg.png") no-repeat;
+  background-size: cover ;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form--container {
+  width: max(50rem, 25%);
+  max-width: 50rem;
+  background-color: var(--form-bg-color);
+  box-shadow: 0 4px 10px 0 rgba(87,87,87,0.50);
+  border-radius: 2rem;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.form-icon{
+  width: 3rem;
+  position: absolute;
+  align-self: center;
+  justify-self: self-start;
+  padding-left: 0.5rem;
+}
+
+.form-icon--main{
+  width: 10rem;
+  margin-block: 3rem;
+}
+
+.login__form--header{
+  color: white;
+  font-family: "October Crow", sans-serif;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.login__button{
+  background: #BC4E25;
+  border-radius: 0.8rem;
+  font-family: "October Crow", sans-serif;
+  padding: 1rem;
+  width: 30%;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login__button:hover{
+
+  background-color: var(--main-button-color);
+}
+.login__button-footer{
+  background: #393939;
+  border-radius: 0.8rem;
+  font-family: "October Crow", sans-serif;
+  padding: 1rem;
+  width: 30%;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-block: 3rem;
+  text-align: center;
+}
+
+.login__button-footer:hover{
+  background-color: darkred;
+}
+
+.login__form--footer{
+  color: white;
+  font-family: "October Crow", sans-serif;
+  margin-top: 4rem;
+  font-size: 3rem;
+}
+
+.login__form--footer-text{
+  color: white;
+  font-family: "Hallowen inline", sans-serif;
+  margin-top: 3rem;
+  text-align: center;
+  padding-inline: 4rem;
+  line-height: 3.5rem;
+  font-size: 2rem;
+}
+
+.error_dialog{
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  font-family: "Hallowen inline", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.error_dialog > span{
+ margin-block: 2rem
+}
+
+.login__wrapper .cancel__button {
+  display: none;
+}
+.login__wrapper .dialog__footer {
+  justify-content: center;
+  margin-right: 0;
+}
+.rip__image{
+  width: 15rem;
+  align-self: center;
+
+}
+
+
+

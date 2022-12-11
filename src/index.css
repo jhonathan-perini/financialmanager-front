@@ -1,0 +1,271 @@
+@import './components/login/login.style.css';
+@import './components/navbar/navbar.style.css';
+@import './components/home/home.style.css';
+@import './components/about/about.style.css';
+@import './components/expenses/expenses.style.css';
+@import './components/dashboard/dashboard.style.css';
+@import "react-datepicker/dist/react-datepicker.css";
+@import 'react-toastify/dist/ReactToastify.css';
+
+@font-face {
+  font-family: "October Crow";
+  src: url("./assets/fonts/OctoberCrow.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hallowen inline";
+  src: url("./assets/fonts/HallowenInline.ttf") format("truetype");
+}
+:root {
+  --form-bg-color: rgba(0, 0, 0, 0.3);
+  --main-button-color: #d24211;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+ 
+}
+body {
+  min-height: 100vh;
+  background-color: #393939;
+}
+
+form{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.input-container{
+  position: relative;
+  display: flex;
+  margin-bottom: 20px ;
+  width: 60%;
+}
+
+.general-input{
+  background: #898989;
+  border: 1px solid #979797;
+  border-radius: 0.8rem;
+  height: 4rem;
+  padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+  outline: none;
+  caret-color: red;
+  color: ghostwhite;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.general-input::placeholder{
+  color: rgba(255, 255, 255, 0.72);
+  font-family: "Hallowen inline", sans-serif;
+}
+
+.not-found__container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.not-found__container > img {
+  width: 40rem;
+  margin-top: 2rem
+}
+.not-found__container > h1{
+  color: white;
+  font-family: October Crow, sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.dialog{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(40rem, 40%);
+  max-width: 70rem;
+  background-color: rgba(255, 255, 255, 0.22);
+
+  border-radius: 2rem;
+  z-index: 101;
+  display: grid;
+  grid-template-areas: "dialogHeader"
+"dialogContent"
+"dialogFooter";
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  scale: 0;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(.25,-0.38,.65,1.38) ;
+  transform-origin: top left;
+
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(57, 57, 57, 0.82);
+}
+.dialog__header{
+  grid-area: dialogHeader;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  font-size: 3rem;
+  color: white;
+  font-family: "Hallowen inline", sans-serif;
+}
+
+.dialog__content{
+  grid-area: dialogContent;
+  padding-top: 2rem;
+}
+
+.dialog__footer{
+  grid-area: dialogFooter;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+.confirm__button {
+  background-color: #1d501d;
+  width: 20%;
+  cursor: pointer;
+}
+
+.confirm__button:hover {
+  background-color: #236923;
+}
+
+.cancel__button {
+  background-color: darkred;
+  width: 20%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.cancel__button:hover {
+  background-color: #b00202;
+
+}
+
+
+.expenses__form input{
+  padding-left: 1rem
+}
+
+.open {
+  scale: 1;
+  opacity: 1;
+
+}
+
+.dialog__image{
+  width: 18rem;
+  margin-left: 2rem;
+}
+
+.dialog__container{
+  display: flex;
+}
+
+
+.dialog__container > form > .input-container {
+ width: 80%;
+
+}
+
+.loading{
+  -webkit-backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.loading > img{
+  position: absolute ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(30rem, 30%);
+  max-width: 50rem;
+}
+
+@media (min-width: 2101px)
+{
+  html{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 2100px)
+{
+ html{
+   font-size: 70%;
+ }
+  .expense__card{
+    width: 100%;
+    max-width: 50rem;
+  }
+  .transactions__view .dialog {
+    max-width: 70rem;
+    width: max(60rem, 60%);
+  }
+}
+
+@media (max-width: 1100px)
+{
+  html{
+    font-size: 50%;
+  }
+  .expense__card{
+    width: 100%;
+    max-width: 100rem;
+  }
+  .transactions__view .dialog {
+    max-width: 100rem;
+    width: max(60rem, 60%);
+  }
+}
+
+@media (max-width: 800px)
+{
+  html{
+    font-size: 30%;
+  }
+  .expense__card{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px)
+{
+  html{
+    font-size: 24%;
+  }
+  .expense__card{
+    width: 100%;
+  }
+}

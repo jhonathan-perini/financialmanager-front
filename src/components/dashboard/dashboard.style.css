@@ -1,0 +1,44 @@
+.dashboard__view{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dashboard__view > h1{
+    color: white;
+    font-family: October Crow, sans-serif;
+    padding: 2rem
+}
+
+.bar-chart  .apexcharts-yaxis-label tspan { fill:white; }
+.pie-chart  .apexcharts-legend-text, .bar-chart  .apexcharts-legend-text  { color:white !important; }
+
+.bar-chart > h2, .pie-chart > h2{
+    color: white;
+    font-family: October Crow, sans-serif;
+    padding: 2rem 0 0 2rem
+}
+.pie-chart > h2{
+    padding: 2rem 0 2rem 2rem
+}
+
+.charts__container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1f1f1f;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.bar-chart {
+    width: 45%;
+}
+
+.pie-chart {
+    width: 40%;
+    padding: 2rem;
+}
+
+
+
+
+
