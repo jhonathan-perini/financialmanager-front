@@ -34,7 +34,7 @@ export default function LoginForm(){
         onSuccess: async (res) => {
         console.log(res)
 
-            window.location.reload()
+            navigate('/home')
         },
         onError: (err) => {
     setDialog(true)
