@@ -117,7 +117,7 @@ export default function Expenses (){
     const [dialog, setDialog] = useState(false)
     const [expense, setExpense] = useState(initialState)
     const [filter, setFilter] = useState(initialStateFilter)
-    const [filteredExpenses, setFilteredExpenses] = useState([])
+
     const [isUpdating, setIsUpdating] = useState(false)
     const client = useQueryClient()
 
@@ -195,7 +195,7 @@ export default function Expenses (){
 
     function createExpense(){
         console.log(expense)
-if(validator.isCurrency(expense.value, {require_symbol: false, thousands_separator: '.', decimal_separator: ','})){
+if(validator.isCurrency(expense.value, {require_symbol: false, thousands_separator: ',', decimal_separator: '.'})){
     if(expense.name.trim().length > 0 && expense.date && expense.type?.label ){
         if(expense.type.label === 'income'){
             isUpdating ? updateExpense.mutate(expense) :  addExpense(expense)
