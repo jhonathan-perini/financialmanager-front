@@ -17,10 +17,10 @@ const queryClient = new QueryClient({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <HashRouter>
+      <BrowserRouter>
           <QueryClientProvider client={queryClient} >
           <App/>
           </QueryClientProvider>
-      </HashRouter>
+      </BrowserRouter>
   </React.StrictMode>
 )
